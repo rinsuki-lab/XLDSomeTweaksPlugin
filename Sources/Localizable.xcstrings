@@ -1,0 +1,74 @@
+{
+  "sourceLanguage" : "ja",
+  "strings" : {
+    "INCOMPATIBLE_XLD_VERSION_BUTTON_ANYWAY" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Load plugin anyway"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "とにかくプラグインを読み込む"
+          }
+        }
+      }
+    },
+    "INCOMPATIBLE_XLD_VERSION_BUTTON_SKIP" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Start XLD without plugin"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "プラグインなしで XLD を起動する"
+          }
+        }
+      }
+    },
+    "INCOMPATIBLE_XLD_VERSION_MESSAGE" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "XLDSomeTweaksPlugin doesn’t support this version of the XLD.\n\nCurrent Version: %1$@\nSupported Version: %2$@"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "XLDSomeTweaksPlugin はこのバージョンの XLD に対応していません。\n\n現在のバージョン: %1$@\n対応バージョン: %2$@"
+          }
+        }
+      }
+    },
+    "INCOMPATIBLE_XLD_VERSION_TITLE" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Unsupported Version"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "非対応バージョン"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.1"
+}

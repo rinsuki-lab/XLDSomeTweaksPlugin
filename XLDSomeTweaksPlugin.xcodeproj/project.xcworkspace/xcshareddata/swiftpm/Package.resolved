@@ -1,0 +1,24 @@
+{
+  "originHash" : "1401a57b11c951bba61a967ea6afe6c937c422c021d305d01facb303cee62a9b",
+  "pins" : [
+    {
+      "identity" : "ikemen",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/banjun/ikemen/",
+      "state" : {
+        "revision" : "e675b68bd816b465e6eabfe8b85b8014d6018612",
+        "version" : "0.9.0"
+      }
+    },
+    {
+      "identity" : "snapkit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SnapKit/SnapKit",
+      "state" : {
+        "revision" : "2842e6e84e82eb9a8dac0100ca90d9444b0307f4",
+        "version" : "5.7.1"
+      }
+    }
+  ],
+  "version" : 3
+}
