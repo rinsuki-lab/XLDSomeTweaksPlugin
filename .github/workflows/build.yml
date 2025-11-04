@@ -7,6 +7,7 @@ jobs:
     runs-on: macos-26
     steps:
     - run: sudo xcode-select -s /Applications/Xcode_26.0.app
+    - run: brew install subversion
     - uses: actions/checkout@v5
     - run: xcrun agvtool new-version -all ${{ github.run_id }}
     - run: ./download_third_party.sh
