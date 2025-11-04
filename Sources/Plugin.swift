@@ -69,5 +69,32 @@ class Plugin: NSObject {
         
         pluginTweaksMenu.addItem(Tweaks_DisableLoadISRCFromMusicBrainz.menuItem)
         pluginTweaksMenu.addItem(Tweaks_ModernMusicBrainzReleaseQuery.menuItem)
+        
+        // ---
+        pluginMenu.addItem(.separator())
+        
+        let bundle = Bundle(for: self)
+        let version = bundle.infoDictionary?["CFBundleShortVersionString"] as? String ?? "(null)"
+        let buildNumber = bundle.infoDictionary?["CFBundleVersion"] as? String ?? "(null)"
+        pluginMenu.addItem(withTitle: "XLDSameTweaksPlugin Version \(version) (\(buildNumber))", action: nil, keyEquivalent: "")
+        
+        let acknowledgementsMenu = NSMenu()
+        let items = [
+            ("Ikemen", URL(string: "https://github.com/banjun/ikemen/blob/0.9.0/LICENSE")!),
+            ("SnapKit", URL(string: "https://github.com/SnapKit/SnapKit/blob/5.7.1/LICENSE")!),
+        ]
+        for item in items {
+            let menuItem = NSMenuItem(title: item.0, action: #selector(openAcknowledgements(_:)), keyEquivalent: "")
+            menuItem.representedObject = item.1
+            menuItem.target = self
+            acknowledgementsMenu.addItem(menuItem)
+        }
+        pluginMenu.addItem(withTitle: "Acknowledgements", action: nil, keyEquivalent: "").submenu = acknowledgementsMenu
+    }
+    
+    @objc class func openAcknowledgements(_ menuItem: NSMenuItem) {
+        if let url = menuItem.representedObject as? URL {
+            NSWorkspace.shared.open(url)
+        }
     }
 }
