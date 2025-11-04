@@ -1,0 +1,15 @@
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: macos-26
+    steps:
+    - uses: actions/checkout@v5
+    - run: xcode-select -s /Applications/Xcode_26.0.app
+    - run: xcodebuild archive -scheme XLDSomeTweaksPlugin -archivePath build
+    - uses: actions/upload-artifact@v4
+      with:
+        name: XLDSomeTweaksPlugin
+        path: build.xcarchive/Products/Library/Bundles/XLDSomeTweaksPlugin.bundle
